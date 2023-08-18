@@ -4,11 +4,18 @@ import { Main } from "@/features/base/components/Main";
 import { Sidebar } from "@/features/base/components/Sidebar";
 import { PostCardList } from "@/features/base/components/PostCardList";
 import { Pagination } from "@/features/base/components/Pagination";
+import {fetchPosts} from "@/features/post/libs/external/postFetcher";
+import {useEffect} from "react";
+import {usePostList} from "@/features/post/hooks/usePostList";
 
 
 
 
 export default function Home() {
+
+  const {posts} =usePostList();
+
+
   return (
     <>
       <Header />
@@ -16,7 +23,7 @@ export default function Home() {
       <Main className="bg-gray-200/80 min-h-screen w-full">
         <Block className="max-w-[1100px] mx-auto grid grid-cols-[1fr,min-content] gap-8">
           <Block className="mt-10">
-            <PostCardList />
+            <PostCardList posts={posts} />
             <Pagination />
             
          

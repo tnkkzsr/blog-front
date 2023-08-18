@@ -6,14 +6,16 @@ import { Relative } from "@/features/base/components/Relative";
 import { Inline } from "@/features/base/components/Inline";
 import { Description } from "@/features/base/components/Description";
 import { Absolute } from "@/features/base/components/Absolute";
+import {Post} from "@/features/post/types";
 
 
 interface Props {
+    post:Post;
     className?: string;
 }
 
 export const PostCard: FunctionComponent<Props> = ({
-    className,
+    className,post
 }) => {
     return (
         <Block
@@ -42,7 +44,7 @@ export const PostCard: FunctionComponent<Props> = ({
                 </Block>
 
                 <Description className='mt-2 text-2xl font-bold cursor-pointer hover:scale-105 transition duration-300'>
-                    ブログタイトル
+                    {post.title}
                 </Description>
 
                 <Absolute className='bottom-3 right-4'>
