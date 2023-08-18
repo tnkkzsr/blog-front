@@ -14,9 +14,29 @@ interface Props {
     className?: string;
 }
 
+//時間表記の変更
+const  formatDate = (updated_at:string):string =>{
+    
+    const nowDate = new Date();
+    const updatedDate = new Date(updated_at);
+    const diff = nowDate.getTime() - updatedDate.getTime();
+    
+    const diffMin = Math.floor(diff / 60000);
+    const diffHour = Math.floor(diffMin / 60);
+    const diffDay = Math.floor(diffHour / 24);
+    
+    if(diffMin <60) return `${diffMin}分前`;
+    else if(diffHour < 24) return `${diffHour}時間前`;
+    else if(diffDay < 7) return `${diffDay}日前`;
+    else return updatedDate.toLocaleDateString('ja-JP');
+
+}
+
 export const PostCard: FunctionComponent<Props> = ({
     className,post
 }) => {
+
+    const updated_at = formatDate(post.updated_at!);
     return (
         <Block
             className={`w-full max-w-[350px] 
@@ -48,7 +68,7 @@ export const PostCard: FunctionComponent<Props> = ({
                 </Description>
 
                 <Absolute className='bottom-3 right-4'>
-                    <Inline className={`${className} text-gray-500`}>36分前</Inline>
+                    <Inline className={`${className} text-gray-500`}>{updated_at}</Inline>
                 </Absolute>
               
             </Relative>
