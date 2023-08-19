@@ -6,16 +6,28 @@ import { Inline } from "./Inline";
 
 interface Props{
     className?: string;
+    onNext?: () => void;
+    onPrev?: () => void;
+    currentPage?: number;
+    lastPage?: number;
 }
 
 export const Pagination: FunctionComponent<Props> = ({
     className,
+    onNext,
+    onPrev,
+    currentPage=1,
+    lastPage=1
 }) => {
     return(
       <Block className={`my-10 flex justify-center ${className || ""}`}>
-        <Button label="前へ"></Button>
-        <Inline className="mx-2 py-2 px-4 text-gray-500">1/10</Inline>
-        <Button label="次へ"></Button>
+        {currentPage>1 && <Button label="前へ" onClick={onPrev}/>}
+        
+        <div className="mx-2 py-2 px-4 text-gray-500">
+          {currentPage} / {lastPage}
+        </div>
+        
+        {currentPage< lastPage  && <Button label="次へ" onClick={onNext}/>}
 
       </Block>
     )

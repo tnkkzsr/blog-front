@@ -13,7 +13,7 @@ import {usePostList} from "@/features/post/hooks/usePostList";
 
 export default function Home() {
 
-  const {posts} =usePostList();
+  const {posts,nextPosts,prevPosts,currentPage,lastPage} =usePostList();
 
 
   return (
@@ -24,7 +24,12 @@ export default function Home() {
         <Block className="max-w-[1100px] mx-auto grid grid-cols-[1fr,min-content] gap-8">
           <Block className="mt-10">
             <PostCardList posts={posts} />
-            <Pagination />
+            <Pagination 
+              className="mt-10 mb-20"
+              currentPage={currentPage}
+              lastPage={lastPage}
+              onNext={nextPosts}
+              onPrev={prevPosts}/>
             
          
           </Block>
