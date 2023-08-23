@@ -1,7 +1,7 @@
 import React from 'react';
-import { Card } from './Card';
-import { Title } from './Title';
-import { Block } from './Block';
+import { Card } from '../../base/components/container/Card';
+import { Title } from '../../base/components/display/Title';
+import { Block } from '../../base/components/container/Block';
 import { CategoryList } from './CategoryList';
 
 export const CategoryPanel = () => {

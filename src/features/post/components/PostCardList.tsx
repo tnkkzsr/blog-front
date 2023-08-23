@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from 'react'
-import { Block } from './Block'
+import { Block } from '../../base/components/container/Block'
 import { PostCard } from './PostCard'
 import { Post } from '@/features/post/types'
 

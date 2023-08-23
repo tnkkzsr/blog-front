@@ -1,6 +1,6 @@
 import React from 'react'
 
-import  {Block}  from './Block'
+import  {Block}  from '../../base/components/container/Block'
 
 export const CategoryList = () => {
   return (

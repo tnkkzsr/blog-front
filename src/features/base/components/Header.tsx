@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from "next/link";
-import { Block } from './Block'
+import { Block } from './container/Block'
 import { Overlay } from './Overlay';
 
 export const Header = () => {

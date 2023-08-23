@@ -1,11 +1,11 @@
 import React,{FunctionComponent} from 'react'
 import Image from 'next/image';
 
-import { Block } from "@/features/base/components/Block";
-import { Relative } from "@/features/base/components/Relative";
-import { Inline } from "@/features/base/components/Inline";
-import { Description } from "@/features/base/components/Description";
-import { Absolute } from "@/features/base/components/Absolute";
+import { Block } from "@/features/base/components/container/Block";
+import { Relative } from "@/features/base/components/container/Relative";
+import { Inline } from "@/features/base/components/container/Inline";
+import { Description } from "@/features/base/components/display/Description";
+import { Absolute } from "@/features/base/components/container/Absolute";
 import {Post} from "@/features/post/types";
 
 

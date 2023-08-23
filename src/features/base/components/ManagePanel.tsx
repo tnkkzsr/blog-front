@@ -1,9 +1,9 @@
 import React from 'react'
 import Link from 'next/link'
 
-import { Card } from './Card'
-import { Block } from './Block'
-import { Title } from './Title'
+import { Card } from './container/Card'
+import { Block } from './container/Block'
+import { Title } from './display/Title'
 import {BsKeyFill} from 'react-icons/bs'
 
 export const ManagePanel = () => {

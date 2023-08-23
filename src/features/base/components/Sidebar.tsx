@@ -1,8 +1,8 @@
 import React,{FunctionComponent} from 'react'
-import { Aside } from './Aside'
+import { Aside } from './container/Aside'
 import { ProfilePanel } from "@/features/base/components/ProfilePanel";
-import { SearchBox } from './SearchBox';
-import { CategoryPanel } from './CategoryPanel';
+import { SearchBox } from '../../search/components/SearchBox';
+import { CategoryPanel } from '../../category/components/CategoryPanel';
 import { ManagePanel } from './ManagePanel';
 
 interface Props {

@@ -1,7 +1,7 @@
 import React, { FunctionComponent } from 'react';
 import Image from "next/image";
 
-import { Block } from './Block';
+import { Block } from '../container/Block';
 
 interface Props {
     width?: number;
