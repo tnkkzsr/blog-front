@@ -13,7 +13,7 @@ export const Title: FunctionComponent<Props> = ({
 
 }) => {
     if (type =="h1") 
-        return <h1 className={`font-bold test-5xl ${className}`}>{children}</h1>;
+        return <h1 className={`font-bold text-5xl ${className}`}>{children}</h1>;
     
     if (type == "h2")
         return <h2 className={`font-bold text-2xl ${className}`}>{children}</h2>;
