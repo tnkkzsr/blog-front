@@ -1,5 +1,6 @@
 import React,{FunctionComponent} from 'react'
 import Image from 'next/image';
+import Link from 'next/link';
 
 import { Block } from "@/features/base/components/container/Block";
 import { Relative } from "@/features/base/components/container/Relative";
@@ -64,7 +65,7 @@ export const PostCard: FunctionComponent<Props> = ({
                 </Block>
 
                 <Description className='mt-2 text-2xl font-bold cursor-pointer hover:scale-105 transition duration-300'>
-                    {post.title}
+                    <a href={`/post/${post.id}`}> {post.title}</a>
                 </Description>
 
                 <Absolute className='bottom-3 right-4'>

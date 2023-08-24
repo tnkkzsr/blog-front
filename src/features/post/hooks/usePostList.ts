@@ -1,6 +1,6 @@
 import {useEffect, useState} from 'react';
 import {Post} from '../types';
-import { fetchPosts } from '../libs/external/postFetcher';
+import { fetchPosts } from '../libs/external/postListFetcher';
 
 export const usePostList = () => {
     const [posts, setPosts] = useState<Post[]>([]);
