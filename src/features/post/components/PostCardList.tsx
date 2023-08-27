@@ -5,12 +5,13 @@ import { Post } from '@/features/post/types'
 
 interface Props {
   posts:Post[];
+  className?:string;
 }
 
 
 
 
-export const PostCardList:FunctionComponent<Props> = ({posts}) => {
+export const PostCardList:FunctionComponent<Props> = ({posts,className}) => {
   return (
     <Block className='grid grid-cols-1 lg:grid-cols-2 place-item-center gap-12 '>
       {posts.map((postItem) => (

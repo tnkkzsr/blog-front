@@ -7,4 +7,5 @@ export interface Post {
     category?: Category;
     pubulishedAt?: string;
     updated_at?: string;
+    header_image?: string;
 }

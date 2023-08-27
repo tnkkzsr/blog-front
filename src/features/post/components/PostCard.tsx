@@ -38,6 +38,10 @@ export const PostCard: FunctionComponent<Props> = ({
 }) => {
 
     const updated_at = formatDate(post.updated_at!);
+    const category = post.category ? post.category.title : "未分類";
+    const headerImageUrl = post.header_image ? post.header_image : "/images/mauntain.png";
+    // const headerImageUrl = "/images/header.png";
+
     return (
         <Block
             className={`w-full max-w-[350px] 
@@ -47,8 +51,11 @@ export const PostCard: FunctionComponent<Props> = ({
             ${className || ""}`}
         >
 
-            <Relative className='h-[160px] transform hover:scale-110 transition duration-500 ease-in-out cursor-pointer'>
-               <Image src={"/images/header.png"} fill sizes="100%" alt="...image"/>
+            <Relative className='h-[200px] transform hover:scale-110 transition duration-500 ease-in-out cursor-pointer'>
+            <Link href={`/post/${post.id}`}> 
+                <Image src={headerImageUrl} fill sizes="100%" alt="...image"/>
+            </Link>
+              
             </Relative>
             <Relative className='h-[180px] p-8'>
                 <Block className={`
@@ -59,13 +66,15 @@ export const PostCard: FunctionComponent<Props> = ({
                         border border-gray-400
                         text-gray-500 font-medium
                     `}>
-                        未分類
+                        {category}
                     </Inline>
 
                 </Block>
 
                 <Description className='mt-2 text-2xl font-bold cursor-pointer hover:scale-105 transition duration-300'>
-                    <a href={`/post/${post.id}`}> {post.title}</a>
+                    <Link href={`/post/${post.id}`}>
+                        {post.title}
+                    </Link>
                 </Description>
 
                 <Absolute className='bottom-3 right-4'>

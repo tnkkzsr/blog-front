@@ -1,7 +1,7 @@
 import React,{FunctionComponent} from "react";
 
 import { Block } from "@/features/base/components/container/Block";
-import { Button} from "@/features/base/components/display/Button";
+import { Button} from "@/features/base/components/form/Button";
 import { Inline } from "../../base/components/container/Inline";
 
 interface Props{

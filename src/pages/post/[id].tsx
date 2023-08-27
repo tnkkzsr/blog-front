@@ -18,12 +18,12 @@ export default function Home() {
 
   return (
     <>
-      <Layout className="mt-10">
+      <Layout className="mt-10 ml-6">
         <Block className="w-[800px] bg-white p-6 rounded-md">
           <PostTitle post={post}/>
-          <Category/>
-          <PostHeader/>
-          <PostContent/>
+          <Category post ={post}/>
+          <PostHeader post={post}/>
+          <PostContent post ={post}/>
           
         </Block >
         

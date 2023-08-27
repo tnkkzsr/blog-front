@@ -13,7 +13,7 @@ export default function Home() {
 
   return (
     <>
-      <Layout className="mt-10" title={title}>
+      <Layout className="mt-10 ml-6" title={title}>
         <PostCardList posts={posts} />
         <Pagination
           currentPage={currentPage}

@@ -31,7 +31,7 @@ export const Layout: FunctionComponent<Props> = ({ className, children,title}) =
                         {children}
                     </Block>
 
-                    <Sidebar className="mt-10" />
+                    <Sidebar className="mt-10 mr-6" />
                 </Block>
             </Main>
         </>
