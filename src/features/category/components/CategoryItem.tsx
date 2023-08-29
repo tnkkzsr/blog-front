@@ -2,19 +2,17 @@ import React,{FunctionComponent} from 'react'
 import {Inline} from '@/features/base/components/container/Inline';
 import { Block } from '@/features/base/components/container/Block';
 import { Post } from '@/features/post/types';
+import { Category } from '@/features/category/types';
 
 interface Props {
     className?: string;
     children?: React.ReactNode;
-    post:Post|null;
+    category: Category | undefined;
 }
 
-export const Category :FunctionComponent<Props> = ({className,children,post}) => {
+export const CategoryItem :FunctionComponent<Props> = ({className,children,category}) => {
 
-   
-
-    if(!post) return null;
-    const category = post.category ? post.category.title : "未分類";
+    const categoryDisplay = category?.title ?? "未分類";
     return (
 
         <Block className="my-6">
@@ -23,7 +21,7 @@ export const Category :FunctionComponent<Props> = ({className,children,post}) =>
                 border border-gray-400
                 text-gray-500
             `}>
-                {category}
+                {categoryDisplay}
             </Inline>
         </Block>
     )

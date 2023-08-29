@@ -1,9 +1,9 @@
 import React,{FunctionComponent} from "react";
 
 import { Block } from "@/features/base/components/container/Block";
-import { Header } from "@/features/base/components/Header";
+import { Header } from "@/features/templates/components/Header";
 import { Main } from "@/features/base/components/container/Main";
-import { Sidebar } from "@/features/base/components/Sidebar";
+import { Sidebar } from "@/features/sideber/Sidebar";
 import Head from "next/head";
 
 interface Props {
@@ -31,7 +31,7 @@ export const Layout: FunctionComponent<Props> = ({ className, children,title}) =
                         {children}
                     </Block>
 
-                    <Sidebar className="mt-10 mr-6" />
+                    <Sidebar className="my-10 mr-6" />
                 </Block>
             </Main>
         </>

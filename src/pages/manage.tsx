@@ -1,6 +1,6 @@
 import React from 'react'
-import { Layout } from '@/features/base/components/Layout'
-import { PostCreateButton } from '@/features/base/components/form/PostCreateButton'
+import { Layout } from '@/features/templates/components/Layout'
+import { PostCreateButton } from '@/features/post/components/PostCreateButton'
 import { PostManageList } from '@/features/post/components/PostManageList';
 import { Pagination } from '@/features/post/components/Pagination';
 import { usePostList } from '@/features/post/hooks/usePostList';
@@ -10,7 +10,7 @@ export default function manage()  {
     const {posts,nextPosts,prevPosts,currentPage,lastPage} =usePostList();
 
   return (
-    <Layout title={title} className='mt-10 ml-40'>
+    <Layout title={title} className='m-10 ml-40'>
         <PostCreateButton/>
         <PostManageList posts={posts}/>
         <Pagination

@@ -2,10 +2,10 @@ import React from 'react'
 
 import {FaTwitter} from 'react-icons/fa'
 
-import {Card} from './container/Card'
-import { FilledImage } from './display/FilledImage'
-import { Title } from './display/Title'
-import { Block } from './container/Block'
+import {Card} from '../base/components/container/Card'
+import { FilledImage } from '../base/components/display/FilledImage'
+import { Title } from '../base/components/display/Title'
+import { Block } from '../base/components/container/Block'
 import Link from "next/link";
 
 export const ProfilePanel = () => {

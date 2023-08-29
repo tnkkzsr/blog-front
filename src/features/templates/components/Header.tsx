@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from "next/link";
-import { Block } from './container/Block'
-import { Overlay } from './Overlay';
+import { Block } from '../../base/components/container/Block'
+import { Overlay } from '../../base/components/Overlay';
 
 export const Header = () => {
   return (

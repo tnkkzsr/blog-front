@@ -2,7 +2,7 @@ import { PostCardList } from "@/features/post/components/PostCardList";
 import { Pagination } from "@/features/post/components/Pagination";
 import {usePostList} from "@/features/post/hooks/usePostList";
 
-import { Layout } from "@/features/base/components/Layout";
+import { Layout } from "@/features/templates/components/Layout";
 
 
 export default function Home() {

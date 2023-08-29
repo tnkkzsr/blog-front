@@ -17,7 +17,6 @@ export const usePostList = () => {
     const fetch = async (page:number) => {
         const {posts:newPosts,lastPage} = await fetchPosts(page);
         setPosts(newPosts);
-        setCurrentPage(page);
         setLastPage(lastPage);
 
     };
