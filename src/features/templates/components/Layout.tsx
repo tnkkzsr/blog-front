@@ -21,6 +21,7 @@ export const Layout: FunctionComponent<Props> = ({ className, children,title}) =
 
             <Head>  
             <title>{`ブログ${title ? ` | ${title}` : ""}`}</title>
+
             </Head>
 
             <Header />

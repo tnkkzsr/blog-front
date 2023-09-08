@@ -1,11 +1,11 @@
-import React,{FunctionComponent} from 'react'
+import React,{FunctionComponent,useState} from 'react'
 import { Input } from '@/features/base/components/form/Input';
 
 interface Props {
     className?: string;
     placeholder?: string;
-    value?: string;
-    onChange?: (value: string) => void;
+    value: string;
+    onChange: (value: string) => void;
 }
 
 export const TitleForm: FunctionComponent<Props> = ({
@@ -14,9 +14,9 @@ export const TitleForm: FunctionComponent<Props> = ({
     onChange=()=>{},
     placeholder="タイトル",
 }) => {
-
+    
     return (
-        
+       
         <Input
             text={value}
             setText={onChange}
