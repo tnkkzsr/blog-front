@@ -12,7 +12,7 @@ interface Props {
 export const Badge: FunctionComponent<Props> = ({
   label,
   className,
-  isFill = true,
+  isFill ,
   onClick,
 }) => {
   return (

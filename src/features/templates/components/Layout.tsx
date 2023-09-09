@@ -21,6 +21,10 @@ export const Layout: FunctionComponent<Props> = ({ className, children,title}) =
 
             <Head>  
             <title>{`ブログ${title ? ` | ${title}` : ""}`}</title>
+            
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <meta http-equiv="Content-Language" content="ja" />
+            <html lang="ja" />
 
             </Head>
 

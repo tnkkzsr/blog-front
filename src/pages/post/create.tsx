@@ -9,6 +9,7 @@ import { PostModeSelect } from '@/features/post/components/PostModeSelect'
 import { PostTextarea } from '@/features/post/components/PostTextarea'
 import { PostSbmitButton } from '@/features/post/components/PostSbmitButton'
 import { postCreater } from '@/features/post/libs/external/postCreater'
+import { PostContentPreview } from '@/features/post/components/PostContentPreview'
 
 export default function create(){
 
@@ -16,11 +17,20 @@ export default function create(){
     const [title, setTitle] = useState('');
     const [content, setContent] = useState('');
     const [category, setCategory] = useState("");
+    const [isPreview ,setIsPreview] = useState(false);
 
     const submit = async () => {
       const data =await postCreater(title, content, category);
       return data.id;
+    }
 
+    const onPreview = () => {
+      setIsPreview(true);
+  
+    }
+
+    const onEdit = () => {
+      setIsPreview(false);
     }
 
     return (
@@ -35,8 +45,9 @@ export default function create(){
               />
             <CategoryForm/>
           </Block>   
-          <PostModeSelect/>
-          <PostTextarea value={content} onChange={setContent}/>
+        
+          <PostModeSelect isPreview={isPreview} onPreview={onPreview} onEdit={onEdit}/>
+          {isPreview ? <PostContentPreview content={content}/> : <PostTextarea value={content} onChange={setContent}/>}
           <PostSbmitButton onclick={submit}/>
         </Layout>
       )

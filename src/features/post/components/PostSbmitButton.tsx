@@ -11,8 +11,14 @@ export const PostSbmitButton :FunctionComponent<Props> = ({onclick}) => {
   const router = useRouter();
 
   const pageTransiton = async () => {
+    try{
     const postId = await onclick();
     router.push(`/post/${postId}`);
+    }catch(error){
+      console.error("投稿に失敗しました",error);
+      alert("投稿に失敗しました");
+
+    }
   }
 
   return (
