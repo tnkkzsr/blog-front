@@ -34,7 +34,7 @@ export default function create(){
     }
 
     return (
-        <Layout className='mt-10 ml-10 '>
+        <Layout className='my-10 ml-10 '>
           <TitleForm value={title} onChange={setTitle}/>
           <Block className='mt-8 flex flex-row'>
             <CategorySelect 
@@ -48,7 +48,7 @@ export default function create(){
         
           <PostModeSelect isPreview={isPreview} onPreview={onPreview} onEdit={onEdit}/>
           {isPreview ? <PostContentPreview content={content}/> : <PostTextarea value={content} onChange={setContent}/>}
-          <PostSbmitButton onclick={submit}/>
+          <PostSbmitButton onclick={submit} />
         </Layout>
       )
 }

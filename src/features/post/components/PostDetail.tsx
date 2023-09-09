@@ -20,17 +20,12 @@ export const PostDetail:FunctionComponent<Props> = ({post}) => {
   
     return (
       <>
-        <Layout className="mt-10 ml-6">
-          <Block className="w-[800px] bg-white p-6 rounded-md">
+
             <PostTitle post={post}/>
             <CategoryItem category ={post?.category}/>
             <PostHeader post={post}/>
             <PostContent post ={post}/>
-            
-          </Block >
-          
-         
-        </Layout>
+        
       </>
     );
   }

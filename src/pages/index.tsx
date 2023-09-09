@@ -5,6 +5,7 @@ import {usePostList} from "@/features/post/hooks/usePostList";
 import { Layout } from "@/features/templates/components/Layout";
 
 
+
 export default function Home() {
 
   const {posts,nextPosts,prevPosts,currentPage,lastPage} =usePostList();

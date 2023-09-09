@@ -15,6 +15,12 @@ export default function Home() {
   const {post} = usePostDetail(id as string);
 
   return (
-          <PostDetail post={post}/>
+    <Layout className="mt-10 ml-6 pb-4">
+    <Block className="w-[800px] h-auto bg-white p-6 rounded-md">
+      <PostDetail post={post}/>
+    </Block >
+    
+   
+  </Layout>
   );
 }

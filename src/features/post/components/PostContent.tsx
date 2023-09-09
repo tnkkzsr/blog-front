@@ -1,7 +1,7 @@
 import React ,{FunctionComponent} from 'react';
 import { Block } from '@/features/base/components/container/Block';
-import { Title } from '@/features/base/components/display/Title';
 import { Post } from '@/features/post/types';
+import  ReactMarkdown  from "react-markdown";
 
 
 interface Props {
@@ -28,7 +28,7 @@ export const PostContent:FunctionComponent<Props> = ({className,children,post}) 
             <Block className='my-4'>
             <p className="mb-4">何がいいのかというと...</p>
             </Block> */}
-            {post.content}
+            <ReactMarkdown className="prose" children={post.content} />
             
             
         </Block>
