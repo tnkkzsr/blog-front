@@ -1,15 +1,23 @@
 import React ,{FunctionComponent}from 'react'
 import { Button } from '@/features/base/components/form/Button';
-
+import { useRouter } from 'next/router';
 
 interface Props {
-  onclick: () => void;
+  onclick: () => Promise<string>;
 }
 
 export const PostSbmitButton :FunctionComponent<Props> = ({onclick}) => {
+
+  const router = useRouter();
+
+  const pageTransiton = async () => {
+    const postId = await onclick();
+    router.push(`/post/${postId}`);
+  }
+
   return (
     
-      <Button label="投稿保存" color='blue' onClick={onclick}/>
+      <Button label="投稿保存" color='blue' onClick={pageTransiton}/>
     
   )
 }

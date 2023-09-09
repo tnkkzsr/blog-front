@@ -19,7 +19,7 @@ export default function create(){
 
     const submit = async () => {
       const data =await postCreater(title, content, category);
-      console.log(data.id);
+      return data.id;
 
     }
 
