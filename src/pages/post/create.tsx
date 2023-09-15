@@ -8,16 +8,18 @@ import { Block } from '@/features/base/components/container/Block'
 import { PostModeSelect } from '@/features/post/components/PostModeSelect'
 import { PostTextarea } from '@/features/post/components/PostTextarea'
 import { PostSbmitButton } from '@/features/post/components/PostSbmitButton'
-import { postCreater } from '@/features/post/libs/external/postCreater'
 import { PostContentPreview } from '@/features/post/components/PostContentPreview'
+import { usePostCreater } from '@/features/post/hooks/usePostCreater'
+import { useCategories } from '@/features/category/contexts/CategoryContext'
 
 export default function create(){
 
-    const {categories} = useCategoryList();
+    const {categories} = useCategories()
     const [title, setTitle] = useState('');
     const [content, setContent] = useState('');
     const [category, setCategory] = useState("");
     const [isPreview ,setIsPreview] = useState(false);
+    const {postCreater} = usePostCreater()
 
     const submit = async () => {
       const data =await postCreater(title, content, category);
@@ -41,7 +43,7 @@ export default function create(){
               className='mr-8' 
               options={categories} 
               value={category}
-              onChange={(newCategory) => {setCategory(newCategory)}}
+              onChange={(category) => {setCategory(category)}}
               />
             <CategoryForm/>
           </Block>   

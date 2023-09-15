@@ -20,7 +20,7 @@ export const Pagination: FunctionComponent<Props> = ({
     lastPage=1
 }) => {
     return(
-      <Block className={`my-10 flex justify-center ${className || ""}`}>
+      <Block className={` ${className || ""}`}>
         {currentPage>1 && <Button label="前へ" onClick={onPrev}/>}
         
         <div className="mx-2 py-2 px-4 text-gray-500">

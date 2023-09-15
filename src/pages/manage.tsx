@@ -10,7 +10,7 @@ import { useRouter } from 'next/router';
 
 export default function manage()  {
     const title = "管理画面";
-    const {posts,nextPosts,prevPosts,currentPage,lastPage} =usePostList();
+    const {posts,nextPosts,prevPosts,currentPage,lastPage,setPosts} =usePostList();
 
     const {logout} = useAuthContext()
 
@@ -21,12 +21,14 @@ export default function manage()  {
         router.push('/');
     }
 
+
   return (
     <Layout title={title} className='m-10 ml-40'>
         <PostCreateButton/>
-        <Button label="ログアウト" color='blue' className='ml-10' onClick={handleLogout}/>
-        <PostManageList posts={posts}/>
+        <Button label="ログアウト" color='blue' className='ml-10 ' onClick={handleLogout}/>
+        <PostManageList posts={posts} setPosts={setPosts}/>
         <Pagination
+          className="my-10 flex justify-center"
           currentPage={currentPage}
           lastPage={lastPage}
           onNext={nextPosts}

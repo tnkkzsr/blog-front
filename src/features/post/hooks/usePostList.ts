@@ -41,5 +41,6 @@ export const usePostList = () => {
         prevPosts,
         currentPage,
         lastPage,
+        setPosts,
     };
 };

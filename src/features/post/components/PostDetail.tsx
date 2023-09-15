@@ -22,7 +22,7 @@ export const PostDetail:FunctionComponent<Props> = ({post}) => {
       <>
 
             <PostTitle post={post}/>
-            <CategoryItem category ={post?.category}/>
+            <CategoryItem category ={post?.category} className="my-6"/>
             <PostHeader post={post}/>
             <PostContent post ={post}/>
         

@@ -8,14 +8,14 @@ interface Props {
     className?: string;
     children?: React.ReactNode;
     posts:Post[];
+    setPosts: React.Dispatch<React.SetStateAction<Post[]>>;
 }
 
-
-export const PostManageList:FunctionComponent<Props> = ({className,children,posts}) => {
+export const PostManageList:FunctionComponent<Props> = ({className,children,posts,setPosts}) => {
     return (
         <Block className="w-[600px] bg-white p-2 rounded-md mt-10">
             {posts.map((postItem) => (
-                <PostManage key={postItem.id} post={postItem} />
+                <PostManage key={postItem.id} post={postItem} setPosts={setPosts}/>
             ))
 }           
         </Block>

@@ -17,8 +17,8 @@ export const PostSbmitButton: FunctionComponent<Props> = ({
     try {
       const postId = await onclick();
       router.push(`/post/${postId}`);
-    } catch (error) {
-      console.error("投稿に失敗しました", error);
+    } catch (e) {
+      console.log(e);
       alert("投稿に失敗しました");
     }
   };

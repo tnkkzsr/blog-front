@@ -17,6 +17,7 @@ export default function Home() {
       <Layout className="mt-10 ml-6" title={title}>
         <PostCardList posts={posts} />
         <Pagination
+          className="my-10 flex justify-center"
           currentPage={currentPage}
           lastPage={lastPage}
           onNext={nextPosts}

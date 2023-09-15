@@ -1,18 +1,17 @@
-import React from 'react'
-
-import  {Block}  from '../../base/components/container/Block'
+import React from "react";
+import { Block } from "@/features/base/components/container/Block";
+import { useCategories } from "../contexts/CategoryContext";
 
 export const CategoryList = () => {
+  const { categories } = useCategories();
+  console.log(categories);
   return (
     <Block>
-
-        <Block className={`border-b p-1 cursor-pointer hover:font-bold`}>
-            日常
+      {categories.map((categoryItem) => (
+        <Block key={categoryItem.id} className={`border-b p-1 cursor-pointer hover:font-bold`}>
+          {categoryItem.title}
         </Block>
-        <Block className={`border-b p-1 cursor-pointer hover:font-bold`}>
-            エンジニアブログ
-        </Block>
-
+      ))}
     </Block>
-  )
-}
+  );
+};

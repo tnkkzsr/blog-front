@@ -15,7 +15,7 @@ export const CategoryItem :FunctionComponent<Props> = ({className,children,categ
     const categoryDisplay = category?.title ?? "未分類";
     return (
 
-        <Block className="my-6">
+        <Block className={className}>
             <Inline className={`
                 px-2 py-1
                 border border-gray-400

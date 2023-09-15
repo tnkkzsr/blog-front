@@ -6,6 +6,7 @@ import { Main } from "@/features/base/components/container/Main";
 import { Sidebar } from "@/features/sideber/Sidebar";
 import Head from "next/head";
 
+
 interface Props {
     className?: string;
     children?: React.ReactNode;
@@ -21,7 +22,6 @@ export const Layout: FunctionComponent<Props> = ({ className, children,title}) =
 
             <Head>  
             <title>{`ブログ${title ? ` | ${title}` : ""}`}</title>
-            <html lang="ja" />
 
             </Head>
 
