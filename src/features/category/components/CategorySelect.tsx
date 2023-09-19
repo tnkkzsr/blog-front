@@ -6,6 +6,7 @@ interface Props {
   className?: string;
   options: Category[];
   value: string;
+  //TODO:categoryで変更した方がいい
   onChange: (newCategory: string) => void;
 }
 

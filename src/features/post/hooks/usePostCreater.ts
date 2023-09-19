@@ -7,7 +7,7 @@ export const usePostCreater = () => {
   const postCreater = async (
     title: string,
     content: string,
-    category_id: string
+    category_id?: string
   ) => {
     const body = {
       title,
